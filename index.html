@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="./css/all.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/039626e855.js" crossorigin="anonymous"></script>
 </head>
@@ -18,6 +19,9 @@
                     <div class="header_sub_div1">
                         <img src="./img/logo.svg" alt="">
                         <h4>ANALYTICS</h4>
+                        <div class="mobile_sign">
+                            <button id="mobile_header_button"><i class="fas fa-bars"></i></button>
+                        </div>
                     </div>
                     <div class="header_sub_div2">
                         <ul>
@@ -26,19 +30,38 @@
                             <li>FAQ</li>
                             <li>Blog</li>
                         </ul>
-                    </div>
+                    </div> 
                     <div class="header_sub_div3">
-                        <ul>
-                            <li class="sign_in">Sign in</li>
-                            <li class="sign_up">Sign up</li>
-                        </ul>
+                        <a href="" class="signin_a">Sign in</a>
+                        <a href="" class="signup_a">Sign up</a> 
                     </div>
+                </div>
+            </div>
+            <div class="mobile_header_div" id="mobile_header">
+                <div class="mobile_header_ul">
+                    <i class="fas fa-times cancel_mobile" id="cancel_mobile_header"></i>
+                    <div class="mobile_head_div">
+                        <img src="./img/logo.svg" alt="">
+                        <h4>ANALYTICS</h4>
+                    </div>
+                    <ul>
+                        <li>Products</li>
+                        <li>Pricing</li>
+                        <li>FAQ</li>
+                        <li>Blog</li>
+                        <li><a href="" class="signin_a">Sign in</a</li>
+                        <li><a href="" class="mobile_signup_a">Sign up</a></li>
+                    </ul>
+                    <!-- <div class="mobile_div_a">
+                        <a href="" class="signin_a">Sign in</a>
+                        <a href="" class="mobile_signup_a">Sign up</a>
+                    </div> -->
                 </div>
             </div>
         </header>
         <div class="first_div">
             <div class="main_sub_div">
-                <div class="sub_main_div1">
+                 <div class="sub_main_div1">
                     <h1>Monitor your business on real-time dashboard</h1>
                     <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Elementum nisi aliquet volutpat pellentesque volutpat est.
@@ -102,10 +125,8 @@
                         <img src="./img/secondDivChart.svg" alt="" srcset="">
                     </div>
                 </div>
-                <div class="main_second_sub_div">
-                    <div class="seconddiv_container_2">
-                        <img src="./img/screen-02.svg" alt="" srcset="">
-                    </div>
+                <div class="main_second_sub_div_e">
+                   
                     <div class="seconddiv_container_1">
                         <p>Fully customizable to address your needs
                         </p>
@@ -115,6 +136,9 @@
                             Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam. Vitae et, tortor pulvinar risus
                             pulvinar sit amet.
                         </h5>
+                    </div>
+                    <div class="seconddiv_container_2">
+                        <img src="./img/screen-02.svg" alt="" srcset="">
                     </div>
                 </div>
                 <div class="main_second_sub_div">
@@ -179,7 +203,7 @@
                     </div>
                 </div>
                 <div class="footer_div">
-                    <div class="header_sub_div1">
+                    <div class="footer_sub_div1">
                         <img src="./img/Subtract.svg" alt="">
                         <h4>ANALYTICS</h4>
                     </div>
@@ -200,6 +224,14 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.getElementById('mobile_header_button').addEventListener('click',()=>{
+            document.getElementById('mobile_header').setAttribute('style','display:block')
+        })
+        document.getElementById('cancel_mobile_header').addEventListener('click',()=>{
+            document.getElementById('mobile_header').setAttribute('style','display:none')
+        })
+    </script>
 </body>
 
 </html>
